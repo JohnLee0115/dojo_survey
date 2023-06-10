@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dojo survey</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container {
+        border: solid 3px black;
+        width: 800px;
+        height: 600px;
+        text-align: left;
+        padding: 50px;
+    }
+
+    label {
+        font-size: 25pt;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    input {
+        font-size: 20pt;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    select {
+        width: 270px;
+        height: 40px;
+    }
+
+    option {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .line {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px;
+    }
+
+    .but {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+</style>
+
+<body>
+    <form class="container" action="/process" method="post">
+        <div class="line">
+            <label for="Name">Your Name : </label>
+            <input type="text" name="name">
+
+        </div>
+        <div class="line">
+            <label for="Location">Dojo Location : </label>
+            <select name="location" id="location" size="1">
+                <option value="San Jose">San Jose</option>
+            </select>
+
+        </div>
+        <div class="line">
+            <label for="Favlang">Favorite Language : </label>
+            <select name="favlang" id="favlang" size="1">
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
+                <option value="Csharp">C#</option>
+            </select>
+
+        </div>
+        <div class="line">
+            <label for="Comment">Comment (optional) : </label>
+        </div>
+        <div class="line">
+            <textarea name="comment" id="comment" cols="95" rows="10"></textarea>
+        </div>
+        <div class="but">
+            <input type="submit" value="Submit!">
+        </div>
+
+    </form>
+</body>
+
+</html>
