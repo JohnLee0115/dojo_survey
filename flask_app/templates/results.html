@@ -10,17 +10,18 @@
 <body>
     <h1>Submitted Info</h1>
     <div>
-        <p>Name : {{session['name']}}</p>
+        <p>Name : {{one_dojo.name}}</p>
     </div>
     <div>
-        <p>Dojo Location : {{session['location']}}</p>
+        <p>Dojo Location : {{one_dojo.location}}</p>
     </div>
     <div>
-        <p>Favorite Language : {{session['favlang']}}</p>
+        <p>Favorite Language : {{one_dojo.language}}</p>
     </div>
     <div>
-        <p>Comments : {{session['comment']}}</p>
+        <p>Comments : {{one_dojo.comment}}</p>
     </div>
+    <a href="/"><button>Go Back</button></a>
 </body>
 
 </html>

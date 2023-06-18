@@ -55,11 +55,18 @@
         display: flex;
         justify-content: flex-end;
     }
-
 </style>
 
 <body>
     <form class="container" action="/process" method="post">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p>{{message}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
         <div class="line">
             <label for="Name">Your Name : </label>
             <input type="text" name="name">
@@ -73,8 +80,8 @@
 
         </div>
         <div class="line">
-            <label for="Favlang">Favorite Language : </label>
-            <select name="favlang" id="favlang" size="1">
+            <label for="language">Favorite Language : </label>
+            <select name="language" id="favlang" size="1">
                 <option value="Python">Python</option>
                 <option value="Java">Java</option>
                 <option value="Csharp">C#</option>
